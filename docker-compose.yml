@@ -2,7 +2,7 @@ version: '3.8'
 services:
   local-fileserver:
     image: 'nginx:alpine'
-    container_name: mediverse-fileserver
+    container_name: local-fileserver
     ports:
       - '9033:9033'
     volumes:
