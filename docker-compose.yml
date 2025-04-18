@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  local-fileserver:
+    image: 'nginx:alpine'
+    container_name: mediverse-fileserver
+    ports:
+      - '9033:9033'
+    volumes:
+      - '/path/to/folder/on/your/vm:/usr/share/nginx/html/data/mediverse/scripts:ro'
+      - '/path/to/folder/on/your/vm/nginx.conf:/etc/nginx/nginx.conf:ro'
+    restart: unless-stopped
